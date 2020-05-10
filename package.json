@@ -1,0 +1,30 @@
+{
+  "name": "create-hello-world",
+  "version": "0.1.0",
+  "description": "Create Node.js Hello World application",
+  "bin": {
+    "create-hello-world": "./index.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3axap4eHko/create-hello-world.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "hello world"
+  ],
+  "author": "Ivan Zakharchanka <3axap4eHko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3axap4eHko/create-hello-world/issues"
+  },
+  "homepage": "https://github.com/3axap4eHko/create-hello-world#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "mkdirp": "^1.0.4"
+  }
+}

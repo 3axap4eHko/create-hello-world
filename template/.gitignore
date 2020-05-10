@@ -1,0 +1,14 @@
+/.idea
+/.vscode
+/.DS_Store
+
+/build
+/coverage
+
+/cache
+/tmp
+/.npmrc
+/.env
+/*.log*
+
+node_modules/
