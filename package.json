@@ -1,6 +1,6 @@
 {
   "name": "create-hello-world",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create Node.js Hello World application",
   "bin": {
     "create-hello-world": "./index.js"
