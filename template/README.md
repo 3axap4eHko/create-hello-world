@@ -4,12 +4,12 @@ This project was bootstrapped with [Create Hello World](https://github.com/3axap
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm run start`
 
 Runs the app.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `yarn debug`
+### `npm run debug`
 
 Runs the app in debug mode.<br />
 Open [chrome://inspect/](chrome://inspect/) to connect a debugger.
