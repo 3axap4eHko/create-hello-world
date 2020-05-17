@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { readFile, writeFile, copyFile, readdir } = require('fs').promises;
+const { readFile, writeFile, copyFile, rename, readdir } = require('fs').promises;
 const { resolve } = require('path');
 const { execSync } = require('child_process');
 const chalk = require('chalk');
@@ -23,7 +23,8 @@ const APP_NAME = process.argv[2];
 
   const files = await readdir(TEMPLATE_PATH);
   await Promise.all(files.map(file => copyFile(resolve(TEMPLATE_PATH, file), resolve(APP_PATH, file))));
-  
+  await rename(resolve(APP_PATH, 'gitignore'), resolve(APP_PATH, '.gitignore'))
+
   const package = JSON.parse(await readFile('package.json', 'utf8'));
   package.scripts.start = 'node index.js';
   package.scripts.debug = 'node --inspect-brk index.js';
