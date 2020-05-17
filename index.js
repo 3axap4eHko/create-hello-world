@@ -29,15 +29,15 @@ const APP_NAME = process.argv[2];
   package.scripts.debug = 'node --inspect-brk index.js';
   await writeFile('package.json', JSON.stringify(package, null, '  '));
 
-  console.log('Success! Created cra at %s', chalk.yellow(APP_PATH));
+  console.log('Success! Created Hello World at %s', chalk.yellow(APP_PATH));
   console.log('Inside that directory, you can run several commands:\n');
-  console.log(chalk.blue('yarn start'));
+  console.log(chalk.blue('npm run start'));
   console.log('  Starts the app\n');
-  console.log(chalk.blue('yarn debug'));
+  console.log(chalk.blue('npm run debug'));
   console.log('  Starts the app in debug mode\n');
   console.log('We suggest that you begin by typing:\n');
   console.log('cd %s:', chalk.blue(APP_NAME));
-  console.log(chalk.blue('yarn start'));
+  console.log(chalk.blue('npm run start'));
 })().catch(error => {
   console.error(chalk.red(error.message));
   console.log('Usage:', chalk.blue('create-hello-world'), chalk.green('<project-directory>'));
