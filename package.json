@@ -17,6 +17,15 @@
     "nodejs",
     "hello world"
   ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "index.js",
+    "template/.gitignore",
+    "template/README.md",
+    "template/index.js"
+  ],
   "author": "Ivan Zakharchanka <3axap4eHko@gmail.com>",
   "license": "MIT",
   "bugs": {

@@ -9,6 +9,7 @@
 /tmp
 /.npmrc
 /.env
+/.env.*
 /*.log*
 
 node_modules/
