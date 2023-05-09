@@ -1,4 +1,5 @@
-const { createServer } = require('http');
+import { createServer } from 'http';
+
 const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 const server = createServer((req, res) => {
