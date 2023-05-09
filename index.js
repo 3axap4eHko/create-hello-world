@@ -15,7 +15,7 @@ const LIB_DIR = fileURLToPath(new URL('.', import.meta.url));
     throw new Error('Please specify the project directory');
   }
   const APP_NAME = dirname(APP_PATH);
-  const TEMPLATE_PATH = resolve(LIB_DIR, 'template');
+  const TEMPLATE_PATH = resolve(LIB_DIR, 'templates');
 
   console.log('Creating a new Hello World app in %s:', chalk.yellow(APP_NAME));
   await mkdir(APP_PATH, { recursive: true });

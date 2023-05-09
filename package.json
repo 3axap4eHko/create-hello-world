@@ -9,6 +9,14 @@
   "engines": {
     "node": ">=16"
   },
+  "files": [
+    "templates/",
+    "package.json",
+    ".gitignore",
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/3axap4eHko/create-hello-world.git"
