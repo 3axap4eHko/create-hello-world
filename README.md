@@ -11,6 +11,7 @@ npx create-hello-world my-app
 
 ### npm
 ```bash
+npm install -g create-hello-world
 npm init hello-world my-app
 ```
 
