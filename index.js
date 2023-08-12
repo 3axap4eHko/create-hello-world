@@ -8,7 +8,7 @@ import chalk from 'chalk';
 
 const APP_PATH = resolve(process.cwd(), process.argv[2]);
 const APP_REL_PATH = relative(process.cwd(), APP_PATH);
-const LIB_DIR = fileURLToPath(new URL('.', import.meta.url));
+const LIB_DIR = dirname(fileURLToPath(import.meta.url));
 
 (async () => {
   if (!APP_PATH) {
