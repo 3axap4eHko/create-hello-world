@@ -29,6 +29,7 @@ const LIB_DIR = dirname(fileURLToPath(import.meta.url));
   const packageJSON = JSON.parse(await readFile('package.json', 'utf8'));
   packageJSON.type = 'module';
   packageJSON.scripts.start = 'node index.js';
+  packageJSON.scripts.dev = 'node --watch index.js';
   packageJSON.scripts.debug = 'node --inspect-brk index.js';
   await writeFile('package.json', JSON.stringify(packageJSON, null, 2));
 
