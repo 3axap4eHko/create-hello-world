@@ -12,7 +12,6 @@
   "files": [
     "templates/",
     "package.json",
-    ".gitignore",
     "index.js",
     "LICENSE",
     "README.md"

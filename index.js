@@ -24,8 +24,7 @@ const LIB_DIR = dirname(fileURLToPath(import.meta.url));
   execSync('npm init -y');
 
   const files = await readdir(TEMPLATE_PATH);
-  await Promise.all(files.map(file => copyFile(join(TEMPLATE_PATH, file), join(APP_PATH, file))));
-  await copyFile(join(LIB_DIR, '.gitignore'), join(APP_PATH, '.gitignore'));
+  await Promise.all(files.map(file => copyFile(join(TEMPLATE_PATH, file), join(APP_PATH, file.replace(/^_/, '.')))));
 
   const packageJSON = JSON.parse(await readFile('package.json', 'utf8'));
   packageJSON.type = 'module';
