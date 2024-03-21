@@ -6,14 +6,13 @@ import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 import chalk from 'chalk';
 
-const APP_PATH = resolve(process.cwd(), process.argv[2]);
-const APP_REL_PATH = relative(process.cwd(), APP_PATH);
-const LIB_DIR = dirname(fileURLToPath(import.meta.url));
-
-(async () => {
-  if (!APP_PATH) {
+try {
+  if (!process.argv[2]) {
     throw new Error('Please specify the project directory');
   }
+  const APP_PATH = resolve(process.cwd(), process.argv[2]);
+  const APP_REL_PATH = relative(process.cwd(), APP_PATH);
+  const LIB_DIR = dirname(fileURLToPath(import.meta.url));
   const APP_NAME = dirname(APP_PATH);
   const TEMPLATE_PATH = resolve(LIB_DIR, 'templates');
 
@@ -42,10 +41,8 @@ const LIB_DIR = dirname(fileURLToPath(import.meta.url));
   console.log('We suggest that you begin by typing:\n');
   console.log('cd %s', chalk.blue(APP_REL_PATH));
   console.log(chalk.blue('npm run start'));
-})().catch(error => {
+} catch (error) {
   console.error(chalk.red(error.message));
   console.error('Usage:', chalk.blue('create-hello-world'), chalk.green('<project-directory>'));
   process.exit(1);
-});
-
-
+}
